@@ -21,11 +21,52 @@ def roots(a, b, c):
     else:
         return "( )"
 
+
 def value_y(a, b, c, x):
     return a * x**2 + b * x + c
 
+
 def to_string(a, b, c):
-    return f"f(x) = {a} * X^2 + {b} * X + {c}"
+    resultado = "f(x) = "
+    primero = True
+
+    if a != 0:
+        resultado += f"{a} * X^2"
+        primero = False
+
+    if b != 0:
+        if not primero:
+            resultado += " + "
+        resultado += f"{b} * X"
+        primero = False
+
+    if c != 0:
+        if not primero:
+            resultado += " + "
+        resultado += f"{c}"
+        primero = False
+
+    if primero:  # todos eran 0
+        resultado += "0"
+
+    return resultado
+
 
 def derivation(a, b, c):
-    return f"f'(x) = {2*a}x + {b}"
+    resultado = "f'(x) = "
+    primero = True
+
+    if a != 0:
+        resultado += f"{2*a} * X"
+        primero = False
+
+    if b != 0:
+        if not primero:
+            resultado += " + "
+        resultado += f"{b}"
+        primero = False
+
+    if primero:  # derivada = 0
+        resultado += "0"
+
+    return resultado
