@@ -20,9 +20,11 @@ def roots(a, b, c):
 def value_y(a, b, c, x):
     return a * x**2 + b * x + c
 
-
 def to_string(a, b, c):
     return f"f(x) = {a} * X^2 + {b} * X + {c}"
+
+def derivation(a, b, c):
+    return f"f'(x) = {2*a}x + {b}"
 
 
 def derivation(a, b, c):
