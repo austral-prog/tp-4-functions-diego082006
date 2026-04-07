@@ -46,7 +46,7 @@ def to_string(a, b, c):
         resultado += f"{c}"
         primero = False
 
-    if primero:  # todos eran 0
+    if primero:  
         resultado += "0"
 
     return resultado
@@ -66,7 +66,7 @@ def derivation(a, b, c):
         resultado += f"{b}"
         primero = False
 
-    if primero:  # derivada = 0
+    if primero:  
         resultado += "0"
 
     return resultado
